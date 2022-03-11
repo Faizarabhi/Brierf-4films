@@ -1,0 +1,16 @@
+.login{
+    background-image: url('../img/image5.jpg') !important;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px; 
+    font-weight: 400px;
+}
+.card{
+    color:#fff;
+    background-color: #2a0182;
+    font-weight: bold;
+}

@@ -1,0 +1,12 @@
+.register{
+    background-image: url('../img/login.jpg') !important;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+.card{
+    color:#fff;
+    background-color: #2a0182;
+}
