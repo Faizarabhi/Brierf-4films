@@ -16,7 +16,7 @@
 
       // Look in controllers for first value
       if(isset($url[0]) && file_exists('../app/controllers/' . ucwords($url[0]). '.php')){
-        // If exists, set as controller
+        // If exists, set as controller (ecrasé)
         $this->currentController = ucwords($url[0]);
         // Unset 0 Index
         unset($url[0]);
@@ -41,7 +41,7 @@
       // Get params
       $this->params = $url ? array_values($url) : [];
 
-      // Call a callback with array of params
+      // Call a callback(function with 2 param) with array of params
       call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
     }
 

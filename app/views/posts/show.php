@@ -12,25 +12,27 @@
       <input type="submit" value="Delete" class="btn btn-danger">
     </form>
   <?php endif; ?>
-  <div class="card card-body mb-3 d-flex ">
+  <div class="card card-body mb-3 d-flex justify-content-center">
   <div class="h-25 d-inline-block " style="width: 5%">
   <img class="rounded-circle" src="./img/upload/<?php echo  $data['post']->image; ?>" alt="">
 </div>
 
     Written by <?php echo $data['user']->name; ?> on <?php echo $data['post']->created_at; ?>
 
-    <h1 class="mt-5"><?php echo $data['post']->title; ?></h1>
-    <div class="h-25 d-inline-block " style="width: 50%">image <img src="./img/upload/<?php echo  $data['post']->image; ?>" alt=""></div>
+    <h1 class="mt-5 align-self-center"><?php echo $data['post']->title; ?></h1>
+    <div class="h-25 d-inline-block align-self-center" style="width: 50%"> <img src="./img/upload/<?php echo  $data['post']->image; ?>" alt=""></div>
 
-    <p><?php echo $data['post']->body; ?></p>
+    <p class="align-self-center"><?php echo $data['post']->body; ?></p>
     <!-- < foreach ($data['comment'] as $comment) : ?> -->
     <!-- if comment  -->
     <?php foreach($data["comments"] as $comment): ?>
 
-    <div class=" bg-light text-dark d-flex align-items-center" style="height :2.7em">
-        <img src="./img/upload/<?=$comment->image?>" alt="photo de <?= $comment->name?>">
-        <p>name is <?= $comment->name?></p>
-        <?= $comment->comment_body?>
+    <div class=" bg-light text-dark h-25  d-flex align-items-center border border-secondary rounded-pill" style="height :2.7em" style="height:9%">
+        <img  style="width:9%" class="rounded-circle"src="./img/upload/<?=$comment->image?>" alt="photo de <?= $comment->name?>">
+      
+        <p class="width:auto text-info" style="margin-bottom: 4rem;">name is <?= $comment->name?></p>
+        <div class="" style="    position: absolute;
+    left: 13%;"><?= $comment->comment_body?></div>
     </div>
     <?php endforeach ?>
     <!-- // nullish coalesing -->
@@ -39,7 +41,7 @@
   </div>
 
 </div>
-<form action="<?php echo URLROOT; ?>/posts/addComment" method="post" >
+<form class="d-flex justify-content-around" action="<?php echo URLROOT; ?>/posts/addComment" method="post" >
     <div class="form-group">
       <input type="hidden" name="post_id" value="<?= $data["post"]->id?>">
       <input type="text" name="comment_body" class="form-control form-control-lg ">
