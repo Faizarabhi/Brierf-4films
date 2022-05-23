@@ -19,7 +19,7 @@
         <?php if (isset($_SESSION['user_id'])) :
           ?>
           <li class="nav-item">
-          <li class="h-25 d-inline-block " style="width: 10% "><img class="rounded-circle" src="./img/upload/<?php echo  $_SESSION['user_image']; ?>" alt="image_profile"></li>
+          <li class="h-25 d-inline-block " ><img style="width: 3rem; height: 3rem " class="rounded-circle" src="./img/upload/<?php echo  $_SESSION['user_image']; ?>" alt="image_profile"></li>
           <li>
             <a class="nav-link" href="#">Welcome <?php echo $_SESSION['user_name']; ?></a>
           </li>

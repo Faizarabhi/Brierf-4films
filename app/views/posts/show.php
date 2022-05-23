@@ -13,8 +13,8 @@
     </form>
   <?php endif; ?>
   <div class="card card-body mb-3 d-flex justify-content-center">
-  <div class="h-25 d-inline-block " style="width: 5%">
-  <img class="rounded-circle" src="./img/upload/<?php echo  $data['post']->image; ?>" alt="">
+  <div class="h-25 d-inline-block " >
+  <img class="rounded-circle" style="width: 3rem; height:3rem" src="./img/upload/<?php echo  $data['user']->image; ?>" alt="">
 </div>
 
     Written by <?php echo $data['user']->name; ?> on <?php echo $data['post']->created_at; ?>
@@ -28,7 +28,7 @@
     <?php foreach($data["comments"] as $comment): ?>
 
     <div class=" bg-light text-dark h-25  d-flex align-items-center border border-secondary rounded-pill" style="height :2.7em" style="height:9%">
-        <img  style="width:9%" class="rounded-circle"src="./img/upload/<?=$comment->image?>" alt="photo de <?= $comment->name?>">
+        <img  style="width:3rem;height:3rem; margin:0 1rem" class="rounded-circle"src="./img/upload/<?=$comment->image?>" alt="photo de <?= $comment->name?>">
       
         <p class="width:auto text-info" style="margin-bottom: 4rem;">name is <?= $comment->name?></p>
         <div class="" style="    position: absolute;
